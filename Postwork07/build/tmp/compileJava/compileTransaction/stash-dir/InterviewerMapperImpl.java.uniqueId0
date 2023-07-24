@@ -1,0 +1,49 @@
+package org.bedu.testing.controllers.mappers;
+
+import javax.annotation.processing.Generated;
+import org.bedu.testing.models.InterviewerDTO;
+import org.bedu.testing.persistence.entities.InterviewerEntity;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = "org.mapstruct.ap.MappingProcessor",
+    date = "2023-07-23T18:25:53-0600",
+    comments = "version: 1.5.5.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-8.0.jar, environment: Java 17.0.7 (Private Build)"
+)
+@Component
+public class InterviewerMapperImpl implements InterviewerMapper {
+
+    @Override
+    public InterviewerEntity InterviewerDTOToInterviewerEntity(InterviewerDTO interviewerModel) {
+        if ( interviewerModel == null ) {
+            return null;
+        }
+
+        InterviewerEntity interviewerEntity = new InterviewerEntity();
+
+        interviewerEntity.setId( interviewerModel.getId() );
+        interviewerEntity.setName( interviewerModel.getName() );
+        interviewerEntity.setLast_name( interviewerModel.getLast_name() );
+        interviewerEntity.setEmail( interviewerModel.getEmail() );
+        interviewerEntity.set_active( interviewerModel.is_active() );
+        interviewerEntity.set_admin( interviewerModel.is_admin() );
+
+        return interviewerEntity;
+    }
+
+    @Override
+    public InterviewerDTO interviewerEntityToInterviewerDTO(InterviewerEntity interviewerEntity) {
+        if ( interviewerEntity == null ) {
+            return null;
+        }
+
+        InterviewerDTO.InterviewerDTOBuilder interviewerDTO = InterviewerDTO.builder();
+
+        interviewerDTO.id( interviewerEntity.getId() );
+        interviewerDTO.name( interviewerEntity.getName() );
+        interviewerDTO.last_name( interviewerEntity.getLast_name() );
+        interviewerDTO.email( interviewerEntity.getEmail() );
+
+        return interviewerDTO.build();
+    }
+}
