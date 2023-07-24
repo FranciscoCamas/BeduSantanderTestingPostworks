@@ -1,0 +1,60 @@
+   modifyInterviewer Salida II: 
+
+ Salida [
+$Seleccione la operacion a realizar:
+ 1. Dar de alta un entrevistador
+2. Consultar un entrevistador
+3. Modificar un entrevistador
+	4. Salir
+&Ingrese el nombre del entrevistador: 
+(Ingrese el apellido del entrevistador: 
+%Ingrese el email del entrevistador: 
+2El entrevistador se encuentra activo? (1=Si/2=No)
+Entrevistador agregado:
+
+ID:        	8
+Name:      	 Interviewer Name 
+#Last Name: 	 Interviewer Lastname 
+#Email:     	 interviewer@mail.com 
+Is Active: 	true
+
+$Seleccione la operacion a realizar:
+ 1. Dar de alta un entrevistador
+2. Consultar un entrevistador
+3. Modificar un entrevistador
+	4. Salir
+0Ingrese el email del entrevistador a modificar:
+Entrevistador encontrado:
+
+ID:        	5
+Name:      	 Interviewer Name 
+#Last Name: 	 Interviewer Lastname 
+#Email:     	 interviewer@mail.com 
+Is Active: 	true
+
+HIngrese el nuevo nombre del entrevistador: (Enter para mantener actual)
+JIngrese el nuevo apellido del entrevistador: (Enter para mantener actual)
+GIngrese el nuevo email del entrevistador: (Enter para mantener actual)
+2El entrevistador se encuentra activo? (1=Si/2=No)
+$Seleccione la operacion a realizar:
+ 1. Dar de alta un entrevistador
+2. Consultar un entrevistador
+3. Modificar un entrevistador
+	4. Salir
+0Ingrese el email del entrevistador a consultar:
+Entrevistador encontrado:
+
+ID:        	5
+#Name:      	 Interviewer NEW Name 
+'Last Name: 	 Interviewer NEW Lastname 
+&Email:     	 newinterviewer@mail.com 
+Is Active: 	true
+
+$Seleccione la operacion a realizar:
+ 1. Dar de alta un entrevistador
+2. Consultar un entrevistador
+3. Modificar un entrevistador
+	4. Salir
+Programa terminado
+
+]

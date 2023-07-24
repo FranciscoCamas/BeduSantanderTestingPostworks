@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    /* Bdu Repository*/
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+    testRuntimeOnly    'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+    /* Ineltgy*/
+/*
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+            */
+}
+
+test {
+    useJUnitPlatform()
+}
+/* to make ir runnable*/
+apply plugin: 'application'
+mainClassName = 'org.bedu.testing.Main'
+run {
+    standardInput = System.in
+}
