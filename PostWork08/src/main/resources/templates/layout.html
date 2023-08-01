@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title layout:title-pattern="$CONTENT_TITLE - $LAYOUT_TITLE"></title>
+
+    <link th:href="@{/styles/menu.css}" rel="stylesheet" />
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+
+    </script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script                 src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+          integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!------ Include the above in your HEAD tag ---------->
+    <script type="text/javascript" th:src="@{/js/menu.js}"></script>
+
+    <!-- Nuevo  -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen"
+          href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css"/>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#Name').autocomplete({
+                source: 'http://localhost:8080/interviewers/search'
+            });
+        });
+    </script>
+    <!--nuevo -->
+</head>
+<body>
+
+<!-- Main Navigation -->
+<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <a class="navbar-brand" th:href="@{/}">Kmas+ Software and Solutions</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
+            aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" th:href="@{/}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/contact}">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/about}">About Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Content Section -->
+<div id='content' class='row-fluid'>
+    <div class="row">
+
+    <div class="col-xl-2">
+
+        <div class="widget-content">
+            <ul id="accordion">
+                <li>
+                    <h4>&nbsp;&nbsp;&nbsp;Interviews <span class="plusminus">+</span></h4>
+                    <ul>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List all Interviews</a></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Make a appointment</a></li>
+                        <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reports </a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>&nbsp;&nbsp;&nbsp;Interviewers <span class="plusminus">+</span></h4>
+                    <ul>
+                        <li><a th:href="@{/interviewers}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List all Interviewers</a></li>
+                        <li><a th:href="@{/interviewers/interviewer-form}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add a new Interviewer</a></li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>&nbsp;&nbsp;&nbsp;Candidates <span class="plusminus">+</span></h4>
+                    <ul>
+                        <li><a th:href="@{/candidates}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List of all Candidates</a></li>
+                        <li><a th:href="@{/candidates/candidate-form}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add a new Candidate</a></li>
+
+                    </ul>
+                </li>
+
+
+                <li>
+                    <h4>&nbsp;&nbsp;&nbsp;Disciplines <span class="plusminus">+</span></h4>
+                    <ul>
+                        <li><a th:href="@{/disciplines}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List of all Disciplines</a></li>
+                        <li><a th:href="@{/disciplines/discipline-form}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add a new discipline</a></li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>&nbsp;&nbsp;&nbsp;Interview Types <span class="plusminus">+</span></h4>
+                    <ul>
+                        <li><a th:href="@{/interviewtypes}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List of all Interview Types</a></li>
+                        <li><a th:href="@{/interviewtypes/interviewtype-form}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add an interview type</a></li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>&nbsp;&nbsp;&nbsp;Technology <span class="plusminus">+</span></h4>
+                    <ul>
+                        <li><a th:href="@{/technologies}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List of all Technologies</a></li>
+                        <li><a th:href="@{/technologies/technology-form}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add a new technology</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-xl-10">
+<section layout:fragment="content">
+    <p>This is filled by the content template.</p>
+</section>
+    </div>
+
+    </div>
+</div>
+<!-- Footer -->
+<div class="row">
+<footer class="container py-5">
+    <div class="row">
+        <div class="col-md-12">
+            <p class="text-muted">&copy; 2023 Kmas+ Software and Solutions. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+</div>
+
+<!-- Optional Section -->
+<th:block layout:fragment="optional" />
+
+</body>
+</html>
